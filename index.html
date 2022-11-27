@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+</head>
+<body> 
+<h1 align="center">iSTFTNET_CP: Improving iSTFTNET vocoder using complex-valued neural network and instantaneous phase loss</h1>
+<p align="center"><b>Authors</b>: <b>Chao Wang, Dading Chong, Dongyang Dai, Dongchao Yang, Shuxin Zhao</b></p>
+
+<h3>1. Synthesis from ground-truth mel-spectrogram</h3>
+    
+ </body>
+<p class="lead"></p>
+<table class="table">
+    <thead>
+    <tr>
+        <th></th>
+        <th>sample1</th>
+        <th>sample2</th>
+        <th>sample3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">HiFi-GAN</th>
+        <td>
+            <audio controls="">
+                <source src="hifigan/gt/LJ050-0031_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="hifigan/gt/LJ050-0041_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="hifigan/gt/LJ050-0051_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">MelGAN</th>
+        <td>
+            <audio controls="">
+                <source src="MelGAN/gt/LJ050-0031_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="MelGAN/gt/LJ050-0041_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="MelGAN/gt/LJ050-0051_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">iSTFTNet-C8I</th>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8I/gt/LJ050-0031_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8I/gt/LJ050-0041_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8I/gt/LJ050-0051_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">iSTFTNet_CP-C8I(Proposed)</th>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8I/gt/LJ050-0031_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8I/gt/LJ050-0041_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8I/gt/LJ050-0051_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">iSTFTNet-C8C8I</th>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8C8I/gt/LJ050-0031_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8C8I/gt/LJ050-0041_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8C8I/gt/LJ050-0051_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">iSTFTNet_CP-C8C8I</th>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8C8I/gt/LJ050-0031_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8C8I/gt/LJ050-0041_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8C8I/gt/LJ050-0051_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+<h3>2. Synthesis from fastspeech2 generated mel-spectrogram</h3>
+    
+ </body>
+<p class="lead"></p>
+<table class="table">
+    <thead>
+    <tr>
+        <th></th>
+        <th>sample1</th>
+        <th>sample2</th>
+        <th>sample3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">HiFi-GAN</th>
+        <td>
+            <audio controls="">
+                <source src="hifigan/tts/dummy_2_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="hifigan/tts/dummy_18_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="hifigan/tts/dummy_30_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">MelGAN</th>
+        <td>
+            <audio controls="">
+                <source src="MelGAN/tts/dummy_2_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="MelGAN/tts/dummy_18_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="MelGAN/tts/dummy_30_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">iSTFTNet-C8I</th>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8I/tts/dummy_2_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8I/tts/dummy_18_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8I/tts/dummy_30_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">iSTFTNet_CP-C8I(Proposed)</th>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8I/tts/dummy_2_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8I/tts/dummy_18_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8I/tts/dummy_30_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">iSTFTNet-C8C8I</th>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8C8I/tts/dummy_2_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8C8I/tts/dummy_18_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet-C8C8I/tts/dummy_30_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">iSTFTNet_CP-C8C8I</th>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8C8I/tts/dummy_2_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8C8I/tts/dummy_18_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>
+            <audio controls="">
+                <source src="iSTFTNet_CP-C8C8I/tts/dummy_30_gen.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+    </tr>
+
+    
+    
+
+
+    </tbody>
+</table>
+
+
+<!--<audio controls> <source src="1.wav" type="audio/wav"></audio>-->
